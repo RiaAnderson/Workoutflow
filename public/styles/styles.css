@@ -1,3 +1,28 @@
+*{
+  text-align: center;
+  font-family: 'Exo 2', sans-serif;
+}
+
+body {
+  background-image: url("../images/barbells.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.display-4{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 600px;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
+
+
+/* 
+font-family: 'Pacifico', cursive;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Permanent Marker', cursive; 
+*/
