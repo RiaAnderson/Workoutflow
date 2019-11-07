@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar w/ text</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                  </ul>
+                  <span class="navbar-text">
+                    Navbar text with an inline element
+                  </span>
+                </div>
+              </nav>
+              
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron jumbotron-fluid bg-transparent">
+                    <div class="container">
+                        <h1 class="display-4">WORKOUTFLOW</h1>
+                        <p class="lead">Ready to get your heart pumping? Follow this step by step guide to complete your
+                            cardio workout. Don’t forget hit play on your playlist!</p>
+                        <hr class="my-4">
+                        <p>Videos have been added for your convenience to instruct you on proper form.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+
+        <div class="row">
+            <!-- New Burgers -->
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="lefthead"><strong>Exercises To Do</strong></div>
+                    <div class="panel-body">
+                        {{#each workout}}
+                        {{#unless this.completed}}
+                        <pre>{{this.id}}. {{this.exercise}}</pre>
+                        <form method="POST" action="/..../update?_method=PUT" class="button-size">
+                            <input type="hidden" name="work_id" type="text" value={{this.id}}>
+                            <button type="submit" class="btn btn-default">Completed</button>
+                        </form>
+                        {{/unless}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!-- Devoured Burgers -->
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="righthead"><strong>Exercises Completed</strong></div>
+                    <div class="panel-body">
+                        <ul>
+                            {{#each workout}}
+                            {{#if this.completed}}
+                            <input class="form-control" type="text" placeholder="{{this.id}}. {{this.completed}}"
+                                readonly>
+                            {{/if}}
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /row -->
+
+
+    </div>
