@@ -12,7 +12,7 @@ router.get("/", function(req, res) {
       mscl: data
     };
     console.log(hbsObject);
-    res.render("index", hbsObject);
+    res.render("home", hbsObject);
   });
 });
 

@@ -1,6 +1,6 @@
 *{
   text-align: center;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo 2', sans-serif;  
 }
 
 body {
@@ -10,19 +10,51 @@ body {
   background-attachment: fixed;
 }
 
+/* p{
+  text-shadow:
+  -0.25px -0.25px 0 rgb(255, 255, 255),
+  0.25px -0.25px 0 rgb(255, 255, 255),
+  -0.25px 0.25px 0 rgb(255, 255, 255),
+  0.25px 0.25px 0 rgb(255, 255, 255);
+} */
+
 .display-4{
   font-family: 'Permanent Marker', cursive;
   font-size: 600px;
 }
 
-.list-group-item {
-  line-height: 2.5;
+/* #footer {
+background-color: antiquewhite;
+width: auto;
+} */
+
+#images{
+  margin-bottom: 5px;
+}
+
+.card-header{
+  background-color: rgb(238, 240, 241);
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0px;
+  background-color: rgb(238, 240, 241);
+  color: black;
+  text-align: center;
 }
 
 
-/* 
-font-family: 'Pacifico', cursive;
+/* .list-group-item {
+  line-height: 2.5;
+} */
+
+
+
+/* font-family: 'Pacifico', cursive;
 font-family: 'Exo 2', sans-serif;
 font-family: 'Righteous', cursive;
-font-family: 'Permanent Marker', cursive; 
-*/
+font-family: 'Permanent Marker', cursive;  */

@@ -54,7 +54,9 @@
                 <div class="jumbotron jumbotron-fluid bg-transparent">
                     <div class="container">
                         <h1 class="display-4">WORKOUTFLOW</h1>
-                        <p class="lead">Ready to get your heart pumping? Follow this step by step guide to complete your
+                        <p class="lead">Ready to get your heart pumping? 
+                            <br>
+                            Follow this step by step guide to complete your
                             cardio workout. Don’t forget hit play on your playlist!</p>
                         <hr class="my-4">
                         <p>Videos have been added for your convenience to instruct you on proper form.
@@ -69,24 +71,33 @@
 
 
         <div class="row">
-            <!-- New Burgers -->
+            <!-- to do -->
             <div class="col-sm-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading" id="lefthead"><strong>Exercises To Do</strong></div>
-                    <div class="panel-body">
-                        {{#each workout}}
-                        {{#unless this.completed}}
-                        <pre>{{this.id}}. {{this.exercise}}</pre>
-                        <form method="POST" action="/..../update?_method=PUT" class="button-size">
-                            <input type="hidden" name="work_id" type="text" value={{this.id}}>
-                            <button type="submit" class="btn btn-default">Completed</button>
-                        </form>
-                        {{/unless}}
-                        {{/each}}
-                    </div>
-                </div>
+                    <div class="card bg-light mb-3" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Cardio</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Day 1</h6>
+                                <p class="card-text">*really cool workout here*</p>
+                                <a href="#" class="card-link">Video link</a>                            
+                            </div>
+                        </div>
+                        <!-- {{!-- <div class="panel panel-default">
+                            <div class="panel-heading" id="lefthead"><strong>Exercises To Do</strong></div>
+                            <div class="panel-body">
+                                {{#each workout}}
+                                {{#unless this.completed}}
+                                <pre>{{this.id}}. {{this.exercise}}</pre>
+                                <form method="POST" action="/..../update?_method=PUT" class="button-size">
+                                    <input type="hidden" name="work_id" type="text" value={{this.id}}>
+                                    <button type="submit" class="btn btn-default">Completed</button>
+                                </form>
+                                {{/unless}}
+                                {{/each}}
+                            </div>
+                        </div> --}} -->
             </div>
-            <!-- Devoured Burgers -->
+            
+            <!-- completed -->
             <div class="col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading" id="righthead"><strong>Exercises Completed</strong></div>
