@@ -13,3 +13,24 @@ CREATE TABLE muscle_building
     completed BOOLEAN DEFAULT false,
     PRIMARY KEY (id)
 );
+
+CREATE TABLE cardio
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    ex_name VARCHAR(200) NOT NULL,
+    intervals VARCHAR(200) NOT NULL,
+    day INT(100) NOT NULL,
+    completed BOOLEAN DEFAULT false,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE strength_training
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    ex_name VARCHAR(200) NOT NULL,
+    body_part VARCHAR(200) NOT NULL,
+    intervals VARCHAR(200) NOT NULL,
+    day INT(100) NOT NULL,
+    completed BOOLEAN DEFAULT false,
+    PRIMARY KEY (id)
+);
