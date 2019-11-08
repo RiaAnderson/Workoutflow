@@ -1,7 +1,7 @@
 // Import the ORM to create functions that will interact with the database.
 var orm = require("../config/orm.js");
 
-var workoutflow = {
+var muscle_building = {
   all: function(cb) {
     orm.all("muscle_building", function(res) {
       cb(res);
@@ -25,5 +25,24 @@ var workoutflow = {
   }
 };
 
+var cardio = {
+  all: function(cb) {
+    orm.all("cardio", function(res) {
+      cb(res);
+    });
+  }
+} 
+
+var strengthTraining = {
+  all: function(cb) {
+    orm.all("strength_training", function(res) {
+      cb(res);
+    });
+  }
+}
+
 // Export the database functions for the controller (catsController.js).
-module.exports = workoutflow;
+module.exports = muscle_building;
+module.exports = cardio;
+module.exports = strengthTraining;
+
