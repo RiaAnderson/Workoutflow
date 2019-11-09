@@ -3,9 +3,10 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (workoutflow.js) to use its database functions.
-var muscle_building = require("../models/workoutflow.js");
-var cardio = require("../models/workoutflow.js");
-var strength_training = require("../models/workoutflow.js");
+// var muscle_building = require("../models/workoutflow.js");
+// var cardio = require("../models/workoutflow.js");
+// var strength_training = require("../models/workoutflow.js");
+ var workouts = require("../models/workoutflow.js");
 
 
 // Create all our routes and set up logic within those routes where required.
@@ -14,22 +15,30 @@ router.get("/", function(req, res) {
   });
 
 router.get("/muscle_building", function(req, res) {
-  muscle_building.all(function(data) {
-  res.render("muscle_building", {mscl: data});
+  workouts.muscle_building.all(function(data) {
+  res.render("muscle_building", {mscl:data});
   });
 });
 
 router.get("/cardio", function(req, res) {
-  cardio.all(function(data) {
-  res.render("cardio", {crd: data});
+  workouts.cardio.all(function(data) {
+  res.render("cardio", {crd:data});
   });
 });
 
 router.get("/strength_training", function(req, res) {
-  strength_training.all(function(data) {
+  workouts.strengthTraining.all(function(data) {
   res.render("strength_training", {str:data});
   });
 });
+
+
+
+
+
+
+
+
 
 // router.post("/api/cats", function(req, res) {
 //   cat.create([
