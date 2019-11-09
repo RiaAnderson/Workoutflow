@@ -77,7 +77,7 @@
                                 <h6 class="card-subtitle mb-2 text-muted">Day 1</h6>
                                     <ul>
                                     {{#each str}}
-                                    <p>{{this.id}}. {{this.ex_name}} </p>
+                                    <p>{{id}}. {{ex_name}} </p>
                                     {{/each}}
                                     </ul>
                                 <p class="card-text">*really cool workout here*</p>
@@ -105,14 +105,14 @@
                 <div class="panel panel-default">
                     <div class="panel-heading" id="righthead"><strong>Exercises Completed</strong></div>
                     <div class="panel-body">
-                        <ul>
+                        {{!-- <ul>
                             {{#each workout}}
                             {{#if this.completed}}
                             <input class="form-control" type="text" placeholder="{{this.id}}. {{this.completed}}"
                                 readonly>
                             {{/if}}
                             {{/each}}
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
             </div>
