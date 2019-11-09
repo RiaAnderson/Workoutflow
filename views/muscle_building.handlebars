@@ -71,23 +71,68 @@
         <div class="row">
             <!-- to do -->
             <div class="col-sm-6">    
-                    <div class="card bg-light mb-3" style="width: 18rem;">
+                    <div class="card bg-light mb-3" style="width: 25rem;">
                             <div class="card-body">
-                                <h5 class="card-title">Muscle Building</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Day 1</h6>
+                                <h5 class="card-title">Day 1</h5>
                                   <ul>
                                   {{#each mscl}}
                                     {{#if_eq day 1}}
-                                  <p>{{id}}. {{ex_name}} {{body_part}} {{intervals}} {{day}} </p>
+                                  <p> - {{ex_name}} {{body_part}} {{intervals}} </p>
                                     {{/if_eq}}
                                   {{/each}}
                                   </ul>
-                                <p class="card-text">*really cool workout here*</p>
                                 <a href="#" class="card-link">Video link</a>                            
                             </div>
                     </div>                       
-              </div>
-          </div>
+            </div>
+            <div class="col-sm-6">    
+                    <div class="card bg-light mb-3" style="width: 25rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 2</h5>
+                                  <ul>
+                                  {{#each mscl}}
+                                    {{#if_eq day 2}}
+                                  <p> - {{ex_name}} {{body_part}} {{intervals}} </p>
+                                    {{/if_eq}}
+                                  {{/each}}
+                                  </ul>
+                                <a href="#" class="card-link">Video link</a>                            
+                            </div>
+                    </div>                       
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">    
+                    <div class="card bg-light mb-3" style="width: 25rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 3</h5>
+                                  <ul>
+                                  {{#each mscl}}
+                                    {{#if_eq day 3}}
+                                  <p> - {{ex_name}} {{body_part}} {{intervals}} </p>
+                                    {{/if_eq}}
+                                  {{/each}}
+                                  </ul>
+                                <a href="#" class="card-link">Video link</a>                            
+                            </div>
+                    </div>                       
+            </div>
+            <div class="col-sm-6">    
+                    <div class="card bg-light mb-3" style="width: 25rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 4</h5>
+                                  <ul>
+                                  {{#each mscl}}
+                                    {{#if_eq day 4}}
+                                  <p> - {{ex_name}} {{body_part}} {{intervals}} </p>
+                                    {{/if_eq}}
+                                  {{/each}}
+                                  </ul>
+                                <a href="#" class="card-link">Video link</a>                            
+                            </div>
+                    </div>                       
+            </div>
+        </div>
 </div>
   <div class="footer">
     <p>&copy; Copyright 2019</p>
