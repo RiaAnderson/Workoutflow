@@ -77,7 +77,9 @@
                                 <h6 class="card-subtitle mb-2 text-muted">Day 1</h6>
                                   <ul>
                                   {{#each mscl}}
-                                  <p>{{id}}. {{ex_name}} </p>
+                                    {{#if_eq day 1}}
+                                  <p>{{id}}. {{ex_name}} {{body_part}} {{intervals}} {{day}} </p>
+                                    {{/if_eq}}
                                   {{/each}}
                                   </ul>
                                 <p class="card-text">*really cool workout here*</p>
@@ -90,6 +92,7 @@
   <div class="footer">
     <p>&copy; Copyright 2019</p>
   </div>
+<script src="../public/js/index.js"></script>
 </body>
 
 </html>
