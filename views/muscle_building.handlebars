@@ -35,16 +35,16 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cardio</a>
+          <a class="nav-link" href="/cardio">Cardio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Strength Training</a>
+          <a class="nav-link" href="/muscle_building">Muscle Building</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Powerlifting</a>
+          <a class="nav-link" href="/strenth_training">Strength Training</a>
         </li>
       </ul>
     </div>
@@ -73,24 +73,20 @@
             <div class="col-sm-6">    
                     <div class="card bg-light mb-3" style="width: 18rem;">
                             <div class="card-body">
-                                <h5 class="card-title">Cardio</h5>
+                                <h5 class="card-title">Muscle Building</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Day 1</h6>
+                                  <ul>
+                                  {{#each mscl}}
+                                  <p>{{this.id}}. {{this.ex_name}} </p>
+                                  {{/each}}
+                                  </ul>
                                 <p class="card-text">*really cool workout here*</p>
                                 <a href="#" class="card-link">Video link</a>                            
                             </div>
-                        </div>                       
-    </div>
-
-  <h1>Muscle Building Workout</h1>
-
-  <h2>Day 1</h2>
-
-  <ul>
-    {{#each mscl}}
-    <p>{{this.id}}. {{this.ex_name}} </p>
-    {{/each}}
-  </ul>
-
+                    </div>                       
+              </div>
+          </div>
+</div>
   <div class="footer">
     <p>&copy; Copyright 2019</p>
   </div>
