@@ -10,44 +10,24 @@ var strength_training = require("../models/workoutflow.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  muscle_building.all(function(data) {
-    var hbsObject = {
-      mscl: data
-    };
-    console.log(hbsObject);
-    res.render("home", hbsObject);
-
+    res.render("home");
   });
-});
 
 router.get("/muscle_building", function(req, res) {
   muscle_building.all(function(data) {
-    var hbsObject = {
-      mscl: data
-    };
-    console.log(hbsObject);
-    res.render("muscle_building", hbsObject);
+  res.render("muscle_building", {mscl: data});
   });
 });
 
 router.get("/cardio", function(req, res) {
   cardio.all(function(data) {
-    var hbsObject = {
-      crd: data
-    };
-    console.log(hbsObject);
-    res.render("cardio", hbsObject);
-
+  res.render("cardio", {crd: data});
   });
 });
+
 router.get("/strength_training", function(req, res) {
   strength_training.all(function(data) {
-    var hbsObject = {
-      str: data
-    };
-    console.log(hbsObject);
-    res.render("strength_training", hbsObject);
-
+  res.render("strength_training", {str:data});
   });
 });
 
