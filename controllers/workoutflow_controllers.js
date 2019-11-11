@@ -32,24 +32,16 @@ router.get("/strength_training", function(req, res) {
   });
 });
 
-
-
-
-
-
-
-
-
-// router.post("/api/cats", function(req, res) {
-//   cat.create([
-//     "name", "sleepy"
-//   ], [
-//     req.body.name, req.body.sleepy
-//   ], function(result) {
-//     // Send back the ID of the new quote
-//     res.json({ id: result.insertId });
-//   });
-// });
+router.post("/muscle_buildingCreate", function(req, res) {
+  workouts.muscle_building.create([
+    "ex_name", "body_part", "intervals", "day"
+  ], [
+    req.body.ex_name, req.body.body_part, req.body.intervals, req.body.day
+  ], function(result) {
+    // Send back the ID of the new quote
+    res.redirect("/muscle_building");
+  });
+});
 
 
 // router.delete("/api/cats/:id", function(req, res) {

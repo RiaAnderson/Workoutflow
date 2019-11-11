@@ -47,6 +47,12 @@ width: auto;
   text-align: center;
 }
 
+.createNew {
+  margin-bottom: 20px;
+  text-align: center; 
+  display: block;
+  margin: 0 auto;
+}
 
 /* .list-group-item {
   line-height: 2.5;

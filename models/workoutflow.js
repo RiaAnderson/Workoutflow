@@ -6,6 +6,11 @@ var muscle_building = {
     orm.all("muscle_building", function(res) {
       cb(res);
     });
+  },
+  create: function(cols, vals, cb){
+    orm.create("muscle_building", cols, vals, function(res) {
+      cb(res);
+    });
   }
   // // The variables cols and vals are arrays.
   // create: function(cols, vals, cb) {
@@ -41,10 +46,6 @@ var strengthTraining = {
   }
 }
 
-// Export the database functions for the controller (catsController.js).
-// module.exports = muscle_building
-// module.exports = cardio;
-// module.exports = strengthTraining;
 module.exports = {
   muscle_building,
   cardio,
