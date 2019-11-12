@@ -98,10 +98,6 @@
 // $submitBtn.on("click", handleFormSubmit);
 // $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
-var data = {
-  day: [1,2,3,4]
-}
-
 
 Handlebars.registerHelper('if_eq', function(a, b, opts) {
   if (a == b) {
