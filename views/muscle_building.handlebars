@@ -1,5 +1,4 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">WORKOUTFLOW</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -29,7 +28,7 @@
       <div class="col-sm-12">
         <div class="jumbotron jumbotron-fluid" id="jumbotron">
           <div class="container">
-            <h1 class="display-4 animated pulse delay-1s slow"><i class="fas fa-dumbbell"></i>WORKOUTFLOW</h1>
+            <h1 class="display-4 animated pulse delay-1s slow">MUSCLE BUILDING</h1>
             <p class="lead">Ready to build muscle mass? 
               <br>
               Follow this step by step guide to complete your
@@ -49,7 +48,7 @@
                     <div class="card bg-light mb-3" style="width: 75rem;">
                             <div class="card-body">
                                 <h4 class="card-title">Day 1: Chest and Triceps</h5>
-                                <img src="../public/images/ChestTris.png" alt="chest and tris" width="50px" height="50px">
+                                <img src="https://user-images.githubusercontent.com/52515674/68890478-d33bd000-06d3-11ea-8763-7a2a7dc2e968.png" alt="chest and tris" width="350px" height="300px" style="float: inherit">
                                   <ul>
                                   {{#each mscl}}
                                     {{#if_eq day 1}}
@@ -84,6 +83,7 @@
                     <div class="card bg-light mb-3" style="width: 75rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 2: Legs and Abs</h5>
+                                <img src="https://user-images.githubusercontent.com/52515674/68890332-7b04ce00-06d3-11ea-9847-fe0ae3883228.png" alt="Legs and Abs" width="350px" height="300px" style="float: inherit">
                                   <ul>
                                   {{#each mscl}}
                                     {{#if_eq day 2}}
@@ -118,6 +118,7 @@
                     <div class="card bg-light mb-3" style="width: 75rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 3: Shoulders and Traps</h5>
+                                <img src="https://user-images.githubusercontent.com/52515674/68891568-e51e7280-06d5-11ea-85e8-2dae61c36b17.png" alt="Shoulders and Traps" width="350px" height="300px" style="float: inherit">
                                   <ul>
                                   {{#each mscl}}
                                     {{#if_eq day 3}}
@@ -152,7 +153,7 @@
                     <div class="card bg-light mb-3" style="width: 75rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 4: Back, Biceps, and Abs</h5>
-                                <img src="http://musclecharts.net/mc/eJzbY2hAHogHagQAhTMMLg==.png" alt="ssss" style="float: left">
+                                <img src="https://user-images.githubusercontent.com/52515674/68891675-2e6ec200-06d6-11ea-8988-ac20f949cf71.png" alt="Back, Bis, and Abs" width="350px" height="300px" style="float: inherit">
                                   <ul>
                                   {{#each mscl}}
                                     {{#if_eq day 4}}
@@ -184,8 +185,8 @@
         </div>
         <div class="row">
           <div class="col-sm-12 center">
-            <div class="card bg-light mb-3" style="width: 75rem;">
-              <div class="card-body" id="New">
+            <div class="card bg-light mb-3 insert" style="width: 75rem;">
+              <div class="card-body">
                 <h2 class="card-title">Insert Your Own Exercise!</h2>
                 <form action="muscle_buildingCreate" method="POST">
                 <div class="form-group">
@@ -210,7 +211,7 @@
                     <option value="4">4</option>
                   </select>
                   <br>
-                  <button type="submit">Add Exercise</button>
+                  <button type="submit" class="btn btn-info" style="margin-top: 5px">Add Exercise</button>
                 </div>
                 </form>
               </div>
