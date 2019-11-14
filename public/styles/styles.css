@@ -18,9 +18,26 @@ body {
   0.25px 0.25px 0 rgb(255, 255, 255);
 } */
 
+#jumbotron{
+  background-color: rgba(255, 140, 0, 0.521);
+  margin-top: 20px;
+}
+
 .display-4{
   font-family: 'Permanent Marker', cursive;
   font-size: 600px;
+}
+.navbar-brand {
+  font-family: 'Permanent Marker', cursive;
+}
+#carouselExampleIndicators{
+  box-shadow: 10px 10px 5px;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 20px;
 }
 
 /* #footer {

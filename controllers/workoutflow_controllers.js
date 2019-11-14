@@ -2,12 +2,7 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (workoutflow.js) to use its database functions.
-// var muscle_building = require("../models/workoutflow.js");
-// var cardio = require("../models/workoutflow.js");
-// var strength_training = require("../models/workoutflow.js");
- var workouts = require("../models/workoutflow.js");
-
+var workouts = require("../models/workoutflow.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
@@ -38,11 +33,17 @@ router.post("/muscle_buildingCreate", function(req, res) {
   ], [
     req.body.ex_name, req.body.body_part, req.body.intervals, req.body.day
   ], function(result) {
-    // Send back the ID of the new quote
     res.redirect("/muscle_building");
   });
 });
 
+
+router.put("/muscle_buildingUpdate", function(req, res) {
+  workouts.muscle_building.update(req.body.mb_id, function(result){
+    console.log(result);
+    res.redirect("/muscle_building");
+  });
+});
 router.post("/strength_trainingCreate", function(req, res) {
   workouts.strength_training.create([
     "ex_name", "body_part", "intervals", "day"
