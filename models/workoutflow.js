@@ -35,20 +35,30 @@ var cardio = {
     orm.all("cardio", function(res) {
       cb(res);
     });
+  },
+  create: function(cols, vals, cb){
+    orm.create("cardio", cols, vals, function(res) {
+      cb(res);
+    });
   }
 } 
 
-var strengthTraining = {
+var strength_training = {
   all: function(cb) {
     orm.all("strength_training", function(res) {
       cb(res);
     });
+  },
+  create: function(cols, vals, cb){
+    orm.create("strength_training", cols, vals, function(res) {
+      cb(res);
+    });
   }
-}
+};
 
 module.exports = {
   muscle_building,
   cardio,
-  strengthTraining
+  strength_training
 }
 

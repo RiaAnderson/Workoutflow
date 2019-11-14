@@ -69,8 +69,8 @@
     <div class="container">
         <div class="row">
             <!-- to do -->
-            <div class="col-sm-6">    
-                    <div class="card bg-light mb-3" style="width: 25rem;">
+            <div class="col-sm-4">    
+                    <div class="card bg-light mb-3" style="width: 23rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 1 </h5>
                                     <ul>
@@ -83,8 +83,8 @@
                             </div>
                     </div>
             </div>
-            <div class="col-sm-6">    
-                    <div class="card bg-light mb-3" style="width: 25rem;">
+            <div class="col-sm-4">    
+                    <div class="card bg-light mb-3" style="width: 23rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 2</h5>
                                     <ul>
@@ -97,8 +97,8 @@
                             </div>
                     </div>
             </div>
-            <div class="col-sm-6">    
-                    <div class="card bg-light mb-3" style="width: 25rem;">
+            <div class="col-sm-4">    
+                    <div class="card bg-light mb-3" style="width: 23rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 3</h5>
                                     <ul>
@@ -112,11 +112,43 @@
                     </div>
             </div>            
         </div>
-    </div>
+     <div class="row">
+          <div class="col-sm-12">
+            <div class="card bg-light mb-3" style="width: 71rem;">
+              <div class="card-body" id="New">
+                <h2 class="card-title">Insert Your Own Exercise!</h2>
+                <form action="cardioCreate" method="POST">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Exercise Name</label>
+                  <input type="text" class="form-control" name="ex_name" placeholder="Crunches">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Repetition</label>
+                  <input type="text" class="form-control" name="intervals" placeholder="30x">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Day</label>
+                  <select class="custom-select" name="day">
+                    <option selected>Open to select day of workout</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <br>
+                  <button type="submit">Add Exercise</button>
+                </div>
+                </form>
+              </div>
+            </div>
+            <br><br>
+          </div>
+        </div>
+    <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWSJHnPb1f0X3" width="1150" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
 
-    <div class="footer">
-        <p>&copy; Copyright 2019</p>
-    </div>
+<div class="footer">
+    <p>&copy; Copyright 2019</p>
+</div>
+<script src="../public/js/index.js"></script>
 </body>
-
 </html>

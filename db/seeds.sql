@@ -59,7 +59,6 @@ INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Barb
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Barbell Squats(Heavy)", "Glute/Quad", "4 x 4", 3);
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Leg Press Machine", "Glute/Quad", "4 x 20", 3);
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Stiff-Legged Deadlifts ", "Glute/Ham", "3 x 6", 3);
-INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Seated Leg Extension", "Quad", "5 x 10", 3);
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Lying Hamstring Curls", "Ham", "5 x 10", 3);
 
 
