@@ -27,7 +27,7 @@ router.get("/cardio", function(req, res) {
 });
 
 router.get("/strength_training", function(req, res) {
-  workouts.strengthTraining.all(function(data) {
+  workouts.strength_training.all(function(data) {
   res.render("strength_training", {str:data});
   });
 });
@@ -43,7 +43,27 @@ router.post("/muscle_buildingCreate", function(req, res) {
   });
 });
 
+router.post("/strength_trainingCreate", function(req, res) {
+  workouts.strength_training.create([
+    "ex_name", "body_part", "intervals", "day"
+  ], [
+    req.body.ex_name, req.body.body_part, req.body.intervals, req.body.day
+  ], function(result) {
+    // Send back the ID of the new quote
+    res.redirect("/strength_training");
+  });
+});
 
+router.post("/cardioCreate", function(req, res) {
+  workouts.cardio.create([
+    "ex_name", "body_part", "intervals", "day"
+  ], [
+    req.body.ex_name, req.body.body_part, req.body.intervals, req.body.day
+  ], function(result) {
+    // Send back the ID of the new quote
+    res.redirect("/cardio");
+  });
+});
 // router.delete("/api/cats/:id", function(req, res) {
 //   var condition = "id = " + req.params.id;
 
