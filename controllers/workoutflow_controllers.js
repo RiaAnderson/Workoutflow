@@ -37,7 +37,6 @@ router.post("/muscle_buildingCreate", function(req, res) {
   });
 });
 
-
 router.put("/muscle_buildingUpdate", function(req, res) {
   workouts.muscle_building.update(req.body.mb_id, function(result){
     console.log(result);
@@ -65,18 +64,6 @@ router.post("/cardioCreate", function(req, res) {
     res.redirect("/cardio");
   });
 });
-// router.delete("/api/cats/:id", function(req, res) {
-//   var condition = "id = " + req.params.id;
-
-//   cat.delete(condition, function(result) {
-//     if (result.affectedRows == 0) {
-//       // If no rows were changed, then the ID must not exist, so 404
-//       return res.status(404).end();
-//     } else {
-//       res.status(200).end();
-//     }
-//   });
-// });
 
 // Export routes for server.js to use.
 module.exports = router;
