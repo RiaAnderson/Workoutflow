@@ -106,3 +106,24 @@ Handlebars.registerHelper('if_eq', function(a, b, opts) {
   //     return opts.inverse(this);
   }
 });
+
+// $(function() {
+//   $(".change-complete").on("click", function(event) {
+//     var id = $(this).data("id");
+//     var newComplete = $(this).data("newComplete");
+
+//     var newCompleteState = {
+//       completed: newComplete
+//     };
+
+//     $.ajax("/muscle_buildingUpdate" + id, {
+//       type: "PUT",
+//       data: newCompleteState
+//     }).then(
+//       function() {
+//         console.log("changed completed to", newComplete);
+//         location.reload();
+//       }
+//     );
+//   });
+// })

@@ -19,6 +19,7 @@
     </script>
   <link href="https://fonts.googleapis.com/css?family=Arvo|Exo+2|Pacifico|Permanent+Marker|Righteous&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 
   <title>Workoutflow</title>
@@ -53,10 +54,10 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div class="jumbotron jumbotron-fluid bg-transparent">
+        <div class="jumbotron jumbotron-fluid" id="jumbotron">
           <div class="container">
-            <h1 class="display-4">WORKOUTFLOW</h1>
-            <p class="lead">Ready to get your heart pumping? 
+            <h1 class="display-4"><i class="fas fa-dumbbell"></i>WORKOUTFLOW</h1>
+            <p class="lead">Ready to build muscle mass? 
               <br>
               Follow this step by step guide to complete your
               muscle building workout. Don’t forget hit play on your playlist!</p>
@@ -70,68 +71,144 @@
 <div class="container">
         <div class="row">
             <!-- to do -->
-            <div class="col-sm-6">    
-                    <div class="card bg-light mb-3" style="width: 25rem;">
+            <div class="col-sm-12 center">    
+                    <div class="card bg-light mb-3" style="width: 75rem;">
                             <div class="card-body">
-                                <h5 class="card-title">Day 1: Chest and Triceps</h5>
+                                <h4 class="card-title">Day 1: Chest and Triceps</h5>
                                   <ul>
                                   {{#each mscl}}
                                     {{#if_eq day 1}}
-                                  <p> - {{ex_name}}  {{intervals}} </p>
+                                    {{#unless this.completed}}
+                                      <p> - {{ex_name}}  {{intervals}} </p>
+                                      <form method="POST" action="/muscle_buildingUpdate?_method=PUT" class="button-size">
+                                      <input type="hidden" name= "mb_id" type="text"
+                                      value={{id}}>
+                                      <button type="submit" class="btn btn-default">COMPLETED!</button>
+                                      </form>
+                                    {{/unless}}
                                     {{/if_eq}}
                                   {{/each}}
-                                  </ul>                       
+                                  </ul>
+                                <hr>
+                                <h5>Completed Workouts</h5>  
+                                <ul>
+                                  {{#each mscl}}
+                                    {{#if_eq day 1}}
+                                    {{#if this.completed}}
+                                      <p> - {{ex_name}}  {{intervals}} </p>
+                                    {{/if}}
+                                    {{/if_eq}}
+                                  {{/each}}
+                                </ul>                     
                             </div>
                     </div>                       
             </div>
-            <div class="col-sm-6">    
-                    <div class="card bg-light mb-3" style="width: 25rem;">
+        </div>
+        <div class="row">
+            <div class="col-sm-12 center">    
+                    <div class="card bg-light mb-3" style="width: 75rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 2: Legs and Abs</h5>
                                   <ul>
                                   {{#each mscl}}
                                     {{#if_eq day 2}}
-                                  <p> - {{ex_name}}  {{intervals}} </p>
+                                    {{#unless this.completed}}
+                                      <p> - {{ex_name}}  {{intervals}} </p>
+                                      <form method="POST" action="/muscle_buildingUpdate?_method=PUT" class="button-size">
+                                      <input type="hidden" name= "mb_id" type="text"
+                                      value={{id}}>
+                                      <button type="submit" class="btn btn-default">COMPLETED!</button>
+                                      </form>
+                                    {{/unless}}
                                     {{/if_eq}}
                                   {{/each}}
-                                  </ul>                          
+                                  </ul>
+                                <hr>
+                                <h5>Completed Workouts</h5>
+                                <ul>
+                                  {{#each mscl}}
+                                    {{#if_eq day 2}}
+                                    {{#if this.completed}}
+                                      <p> - {{ex_name}}  {{intervals}} </p>
+                                    {{/if}}
+                                    {{/if_eq}}
+                                  {{/each}}
+                                </ul>                                
                             </div>
                     </div>                       
             </div>
         </div>
         <div class="row">
-          <div class="col-sm-6">    
-                    <div class="card bg-light mb-3" style="width: 25rem;">
+            <div class="col-sm-12 center">    
+                    <div class="card bg-light mb-3" style="width: 75rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 3: Shoulders and Traps</h5>
                                   <ul>
                                   {{#each mscl}}
                                     {{#if_eq day 3}}
-                                  <p> - {{ex_name}}  {{intervals}} </p>
-                                    {{/if_eq}}
-                                  {{/each}}
-                                  </ul>         
-                            </div>
-                    </div>                       
-            </div>
-            <div class="col-sm-6">    
-                    <div class="card bg-light mb-3" style="width: 25rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Day 4: Back, Biceps, and Abs</h5>
-                                  <ul>
-                                  {{#each mscl}}
-                                    {{#if_eq day 4}}
-                                  <p> - {{ex_name}}  {{intervals}} </p>
+                                    {{#unless this.completed}}
+                                      <p> - {{ex_name}}  {{intervals}} </p>
+                                      <form method="POST" action="/muscle_buildingUpdate?_method=PUT" class="button-size">
+                                      <input type="hidden" name= "mb_id" type="text"
+                                      value={{id}}>
+                                      <button type="submit" class="btn btn-default">COMPLETED!</button>
+                                      </form>
+                                    {{/unless}}
                                     {{/if_eq}}
                                   {{/each}}
                                   </ul>
+                                  <hr>
+                                  <h5>Completed Workouts</h5>
+                                  <ul>
+                                  {{#each mscl}}
+                                    {{#if_eq day 3}}
+                                    {{#if this.completed}}
+                                      <p> - {{ex_name}}  {{intervals}} </p>
+                                    {{/if}}
+                                    {{/if_eq}}
+                                  {{/each}}
+                                </ul>                                             
                             </div>
                     </div>                       
             </div>
         </div>
         <div class="row">
-          <div class="col-sm-12">
-            <div class="card bg-light mb-3" style="width: 50rem;">
+            <div class="col-sm-12 center">    
+                    <div class="card bg-light mb-3" style="width: 75rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 4: Back, Biceps, and Abs</h5>
+                                  <ul>
+                                  {{#each mscl}}
+                                    {{#if_eq day 4}}
+                                    {{#unless this.completed}}
+                                      <p> - {{ex_name}}  {{intervals}} </p>
+                                      <form method="POST" action="/muscle_buildingUpdate?_method=PUT" class="button-size">
+                                      <input type="hidden" name= "mb_id" type="text"
+                                      value={{id}}>
+                                      <button type="submit" class="btn btn-default">COMPLETED!</button>
+                                      </form>
+                                    {{/unless}}
+                                    {{/if_eq}}
+                                  {{/each}}
+                                  </ul>
+                                  <hr>
+                                  <h5>Completed Workouts</h5>
+                                  <ul>
+                                  {{#each mscl}}
+                                    {{#if_eq day 4}}
+                                    {{#if this.completed}}
+                                      <p> - {{ex_name}}  {{intervals}} </p>
+                                    {{/if}}
+                                    {{/if_eq}}
+                                  {{/each}}
+                                  </ul>        
+                            </div>
+                    </div>                       
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 center">
+            <div class="card bg-light mb-3" style="width: 75rem;">
               <div class="card-body" id="New">
                 <h2 class="card-title">Insert Your Own Exercise!</h2>
                 <form action="muscle_buildingCreate" method="POST">
