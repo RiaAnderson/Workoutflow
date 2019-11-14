@@ -39,7 +39,10 @@ body {
   flex-direction: row;
   margin-bottom: 20px;
 }
-
+.insert{
+  display: block;
+  margin-bottom: 50px;
+}
 /* #footer {
 background-color: antiquewhite;
 width: auto;
