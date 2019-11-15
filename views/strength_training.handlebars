@@ -44,45 +44,102 @@
 <div class="container">
     <div class="row">
         <!-- to do -->
-        <div class="col-sm-4">
-            <div class="card bg-light mb-3" style="width: 23rem;">
+        <div class="col-sm-12 center">
+            <div class="card bg-light mb-3" style="width: 75rem;">
                 <div class="card-body">
                     <h5 class="card-title">Day 1: Bench Day</h5>
+                    <img src = "http://clipart-library.com/images_k/powerlifting-silhouette/powerlifting-silhouette-7.png" alt="bench press" width="350px" height="300px" style="float: inherit">
+                    <ul>
+                    {{#each str}}
+                        {{#if_eq day 1}}
+                        {{#unless this.completed}}
+                         <p> - {{ex_name}}  {{intervals}} </p>
+                         <form method="POST" action="/strength_trainingUpdate?_method=PUT" class="button-size">
+                         <input type="hidden" name= "mb_id" type="text"
+                         value={{id}}>
+                         <button type="submit" class="btn btn-info">COMPLETED!</button>
+                         </form>
+                        {{/unless}}
+                        {{/if_eq}}
+                    {{/each}}
+                    </ul>
+                    <hr>
+                    <h5>Completed Workouts</h5>  
                     <ul>
                         {{#each str}}
                         {{#if_eq day 1}}
-                        <p> - {{ex_name}} {{intervals}} </p>
+                        {{#if this.completed}}
+                          <p> - {{ex_name}}  {{intervals}} </p>
+                        {{/if}}
                         {{/if_eq}}
                         {{/each}}
-                    </ul>
+                     </ul>           
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card bg-light mb-3" style="width: 23rem;">
+        <div class="col-sm-12 center">
+            <div class="card bg-light mb-3" style="width: 75rem;">
                 <div class="card-body">
                     <h5 class="card-title">Day 2: Deadlift Day</h5>
+                    <img src = "http://clipart-library.com/img/1985093.jpg" alt="deadlift" width="350px" height="300px" style="float: inherit">
                     <ul>
                         {{#each str}}
                         {{#if_eq day 2}}
-                        <p> - {{ex_name}} {{intervals}} </p>
+                        {{#unless this.completed}}
+                         <p> - {{ex_name}}  {{intervals}} </p>
+                         <form method="POST" action="/strength_trainingUpdate?_method=PUT" class="button-size">
+                         <input type="hidden" name= "mb_id" type="text"
+                         value={{id}}>
+                         <button type="submit" class="btn btn-info">COMPLETED!</button>
+                         </form>
+                        {{/unless}}                       
                         {{/if_eq}}
                         {{/each}}
                     </ul>
+                    <hr>
+                    <h5>Completed Workouts</h5>  
+                    <ul>
+                        {{#each str}}
+                        {{#if_eq day 2}}
+                        {{#if this.completed}}
+                          <p> - {{ex_name}}  {{intervals}} </p>
+                        {{/if}}
+                        {{/if_eq}}
+                        {{/each}}
+                     </ul>     
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card bg-light mb-3" style="width: 23rem;">
+        <div class="col-sm-12 center">
+            <div class="card bg-light mb-3" style="width:75rem;">
                 <div class="card-body">
                     <h5 class="card-title">Day 3: Squat Day</h5>
+                    <img src = "http://www.stickthisgraphics.com/images/Powerlifter%20Silhouette%203%20(Small).jpg" alt="squat" width="350px" height="300px" style="float: inherit"> 
                     <ul>
                         {{#each str}}
                         {{#if_eq day 3}}
-                        <p> - {{ex_name}} {{intervals}} </p>
+                        {{#unless this.completed}}
+                         <p> - {{ex_name}}  {{intervals}} </p>
+                         <form method="POST" action="/strength_trainingUpdate?_method=PUT" class="button-size">
+                         <input type="hidden" name= "mb_id" type="text"
+                         value={{id}}>
+                         <button type="submit" class="btn btn-info">COMPLETED!</button>
+                         </form>
+                        {{/unless}}                       
                         {{/if_eq}}
                         {{/each}}
                     </ul>
+                    <hr>
+                    <h5>Completed Workouts</h5>  
+                    <ul>
+                        {{#each str}}
+                        {{#if_eq day 3}}
+                        {{#if this.completed}}
+                          <p> - {{ex_name}}  {{intervals}} </p>
+                        {{/if}}
+                        {{/if_eq}}
+                        {{/each}}
+                     </ul>     
                 </div>
             </div>
         </div>

@@ -29,7 +29,12 @@ var cardio = {
     orm.create("cardio", cols, vals, function(res) {
       cb(res);
     });
-  }
+  },
+  update: function(id, cb) {
+    orm.update("cardio", id, cb, function(res) {
+      cb(res);
+    });
+  },
 } 
 
 var strength_training = {
@@ -42,7 +47,12 @@ var strength_training = {
     orm.create("strength_training", cols, vals, function(res) {
       cb(res);
     });
-  }
+  },
+  update: function(id, cb) {
+    orm.update("strength_training", id, cb, function(res) {
+      cb(res);
+    });
+  },
 };
 
 module.exports = {

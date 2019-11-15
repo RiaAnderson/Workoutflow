@@ -43,6 +43,20 @@ router.put("/muscle_buildingUpdate", function(req, res) {
     res.redirect("/muscle_building");
   });
 });
+
+router.put("/strength_trainingUpdate", function(req, res) {
+  workouts.strength_training.update(req.body.mb_id, function(result){
+    console.log(result);
+    res.redirect("/strength_training");
+  });
+});
+
+router.put("/cardioUpdate", function(req, res) {
+  workouts.cardio.update(req.body.mb_id, function(result){
+    console.log(result);
+    res.redirect("/cardio");
+  });
+});
 router.post("/strength_trainingCreate", function(req, res) {
   workouts.strength_training.create([
     "ex_name", "body_part", "intervals", "day"
