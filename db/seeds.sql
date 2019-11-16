@@ -51,10 +51,10 @@ INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Stan
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Triceps Extensions", "Tri", "4 x 15", 1);
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Seated Arnold Presses", "Shoulder/Tri", "5 x 10", 1);
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Deadlifts", "Glute/Ham", "4 x 4", 2);
-INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Power Shrugs", "Shoulders", "2 x 20", 2);
+INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Power Shrugs", "Traps", "2 x 20", 2);
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Bent Over Barbell Rows", "Back/Bi", "5 x 10", 2);
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Wide Grip Pull Ups", "Back/Bi", "5 x Failure", 2);
-INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Dumbbell Hammer Curls", "3 x 12", "3 x 12", 2);
+INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Dumbbell Hammer Curls", "Biceps", "3 x 12", 2);
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Barbell Squats(Light)", "Glutes/Quad", "1 x 20", 3);
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Barbell Squats(Heavy)", "Glute/Quad", "4 x 4", 3);
 INSERT INTO strength_training (ex_name, body_part, intervals, day) VALUES ("Leg Press Machine", "Glute/Quad", "4 x 20", 3);

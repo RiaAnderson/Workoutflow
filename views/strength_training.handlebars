@@ -47,8 +47,8 @@
         <div class="col-sm-12 center">
             <div class="card bg-light mb-3" style="width: 75rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Day 1: Bench Day</h5>
-                    <img src = "http://clipart-library.com/images_k/powerlifting-silhouette/powerlifting-silhouette-7.png" alt="bench press" width="350px" height="300px" style="float: inherit">
+                    <h5 class="card-title">Day 1</h5>
+                    <img src = "https://user-images.githubusercontent.com/52515674/68986068-93a6de00-07d0-11ea-9edd-abe5390b1a05.png" alt="Chest, Tris, Shoulders" width="350px" height="300px" style="float: inherit">
                     <ul>
                     {{#each str}}
                         {{#if_eq day 1}}
@@ -80,8 +80,8 @@
         <div class="col-sm-12 center">
             <div class="card bg-light mb-3" style="width: 75rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Day 2: Deadlift Day</h5>
-                    <img src = "http://clipart-library.com/img/1985093.jpg" alt="deadlift" width="350px" height="300px" style="float: inherit">
+                    <h5 class="card-title">Day 2</h5>
+                    <img src = "https://user-images.githubusercontent.com/52515674/68986203-cc938280-07d1-11ea-813a-e129610159d0.png" alt="Day2" width="350px" height="300px" style="float: inherit">
                     <ul>
                         {{#each str}}
                         {{#if_eq day 2}}
@@ -114,7 +114,7 @@
             <div class="card bg-light mb-3" style="width:75rem;">
                 <div class="card-body">
                     <h5 class="card-title">Day 3: Squat Day</h5>
-                    <img src = "http://www.stickthisgraphics.com/images/Powerlifter%20Silhouette%203%20(Small).jpg" alt="squat" width="350px" height="300px" style="float: inherit"> 
+                    <img src = "https://user-images.githubusercontent.com/52515674/68986284-930f4700-07d2-11ea-8b17-cd4d363f23c7.png" alt="Day3" width="350px" height="300px" style="float: inherit"> 
                     <ul>
                         {{#each str}}
                         {{#if_eq day 3}}
@@ -155,6 +155,10 @@
                             <input type="text" class="form-control" name="ex_name" placeholder="Squats">
                         </div>
                         <div class="form-group">
+                            <label for="formGroupExampleInput">Body Part</label>
+                            <input type="text" class="form-control" name="body_part" placeholder="Chest and Triceps">
+                        </div>
+                        <div class="form-group">
                             <label for="formGroupExampleInput2">Sets/Reps</label>
                             <input type="text" class="form-control" name="intervals" placeholder="3x5">
                         </div>
@@ -167,7 +171,7 @@
                                 <option value="3">3</option>
                             </select>
                             <br>
-                            <button type="submit">Add Exercise</button>
+                            <button type="submit" class="btn btn-info" style="margin-top: 5px">Add Exercise</button>
                         </div>
                     </form>
                 </div>
