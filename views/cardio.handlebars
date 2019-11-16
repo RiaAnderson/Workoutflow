@@ -45,45 +45,114 @@
 <div class="container">
     <div class="row">
         <!-- to do -->
-        <div class="col-sm-4">
-            <div class="card bg-light mb-3" style="width: 23rem;">
+        <div class="col-sm-12 center">
+            <div class="card bg-light mb-3" style="width: 75rem;">
                 <div class="card-body">
                     <h5 class="card-title">Day 1 </h5>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif1-1536330009.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif1-1536330009.mp4"></video>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif2-1536330037.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif2-1536330037.mp4"></video>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif3-1536330052.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif3-1536330052.mp4"></video>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif9-1536330181.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif9-1536330181.mp4"></video>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif14-1536330306.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif14-1536330306.mp4"></video>
+                    <ul>
+                        {{#each crd}}
+                          {{#if_eq day 1}}
+                          {{#unless this.completed}}
+                          <p> - {{ex_name}}  {{intervals}} </p>
+                          <form method="POST" action="/cardioUpdate?_method=PUT" class="button-size">
+                          <input type="hidden" name= "mb_id" type="text"
+                          value={{id}}>
+                          <button type="submit" class="btn btn-info">COMPLETED!</button>
+                          </form>
+                          {{/unless}}
+                          {{/if_eq}}
+                        {{/each}}
+                    </ul>
+                    <hr>
+                    <h5>Completed Workouts</h5>  
                     <ul>
                         {{#each crd}}
                         {{#if_eq day 1}}
-                        <p> - {{ex_name}} {{body_part}} {{intervals}} </p>
+                        {{#if this.completed}}
+                           <p> - {{ex_name}}  {{intervals}} </p>
+                        {{/if}}
                         {{/if_eq}}
                         {{/each}}
-                    </ul>
+                    </ul>        
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card bg-light mb-3" style="width: 23rem;">
+        <div class="col-sm-12 center">
+            <div class="card bg-light mb-3" style="width: 75rem;">
                 <div class="card-body">
                     <h5 class="card-title">Day 2</h5>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif4-1536277678.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif4-1536277678.mp4"></video>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif5-1536338785.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif5-1536338785.mp4"></video>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif11-1536330224.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif11-1536330224.mp4"></video>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif13-1536330290.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif13-1536330290.mp4"></video>  
+                    <video data-src="https://hmg.h-cdn.co/videos/gif8-1536330163.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif8-1536330163.mp4"></video>
+                    <ul>
+                        {{#each crd}}
+                          {{#if_eq day 2}}
+                          {{#unless this.completed}}
+                          <p> - {{ex_name}}  {{intervals}} </p>
+                          <form method="POST" action="/cardioUpdate?_method=PUT" class="button-size">
+                          <input type="hidden" name= "mb_id" type="text"
+                          value={{id}}>
+                          <button type="submit" class="btn btn-info">COMPLETED!</button>
+                          </form>
+                          {{/unless}}
+                          {{/if_eq}}
+                        {{/each}}
+                    </ul>
+                    <hr>
+                    <h5>Completed Workouts</h5>  
                     <ul>
                         {{#each crd}}
                         {{#if_eq day 2}}
-                        <p> - {{ex_name}} {{body_part}} {{intervals}} </p>
+                        {{#if this.completed}}
+                           <p> - {{ex_name}}  {{intervals}} </p>
+                        {{/if}}
                         {{/if_eq}}
                         {{/each}}
-                    </ul>
+                    </ul>        
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card bg-light mb-3" style="width: 23rem;">
+        <div class="col-sm-12 center">
+            <div class="card bg-light mb-3" style="width: 75rem;">
                 <div class="card-body">
                     <h5 class="card-title">Day 3</h5>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif6-1536330122.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif6-1536330122.mp4"></video>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif7-1536330143.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif7-1536330143.mp4"></video>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif10-1536330206.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif10-1536330206.mp4"></video>
+                    <video data-src="https://hmg.h-cdn.co/videos/gif15-1536330342.mp4" autoplay="" loop="" muted="" playsinline="" width="200px" src="https://hmg.h-cdn.co/videos/gif15-1536330342.mp4"></video>                    
+                    <video data-src="https://hmg.h-cdn.co/videos/gif20-1536330418.mp4" autoplay="" loop="" muted="" playsinline="" width= "200px" src="https://hmg.h-cdn.co/videos/gif20-1536330418.mp4"></video>       
+                    <ul>
+                        {{#each crd}}
+                          {{#if_eq day 3}}
+                          {{#unless this.completed}}
+                          <p> - {{ex_name}}  {{intervals}} </p>
+                          <form method="POST" action="/cardioUpdate?_method=PUT" class="button-size">
+                          <input type="hidden" name= "mb_id" type="text"
+                          value={{id}}>
+                          <button type="submit" class="btn btn-info">COMPLETED!</button>
+                          </form>
+                          {{/unless}}
+                          {{/if_eq}}
+                        {{/each}}
+                    </ul>
+                    <hr>
+                    <h5>Completed Workouts</h5>  
                     <ul>
                         {{#each crd}}
                         {{#if_eq day 3}}
-                        <p> - {{ex_name}} {{body_part}} {{intervals}} </p>
+                        {{#if this.completed}}
+                           <p> - {{ex_name}}  {{intervals}} </p>
+                        {{/if}}
                         {{/if_eq}}
                         {{/each}}
-                    </ul>
+                    </ul>        
                 </div>
             </div>
         </div>
