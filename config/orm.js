@@ -41,6 +41,7 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 var orm = {
+  // Retrieving all data from database
   all: function(tableInput, cb) {
     connection.query("SELECT * FROM ??", [tableInput], function(err, result) {
       if (err) {
@@ -49,6 +50,7 @@ var orm = {
       cb(result);
     });
   },
+  // Creating new input into database
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -66,6 +68,7 @@ var orm = {
       cb(result);
     });
   },
+  // Changing property of item on database
   update: function(tableInput, condition, cb){
     connection.query("UPDATE " +tableInput+ " SET completed=true WHERE id="+condition+ ";", function(err,result) {
         if (err) throw err;
@@ -78,7 +81,14 @@ var orm = {
     // }
   // }
 },
-};
+  // Changing property of item on database
+  reset: function(tableInput, condition, cb){
+    connection.query("UPDATE " +tableInput+ " SET completed=false WHERE id="+condition+ ";", function(err,result) {
+      if (err) throw err;
+      cb(result);
+    });
+  }
+}
 
 // Export the orm object for the model (cat.js).
 module.exports = orm;

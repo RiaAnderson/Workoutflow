@@ -75,6 +75,11 @@
                         {{#if_eq day 1}}
                         {{#if this.completed}}
                            <p> - {{ex_name}}  {{intervals}} </p>
+                           <form method="POST" action="/cardioReset?_method=PUT" class="button-size">
+                           <input type="hidden" name= "mb_id" type="text"
+                           value={{id}}>
+                           <button type="submit" class="btn btn-info">NOT COMPLETE!</button>
+                           </form>
                         {{/if}}
                         {{/if_eq}}
                         {{/each}}
@@ -112,6 +117,11 @@
                         {{#if_eq day 2}}
                         {{#if this.completed}}
                            <p> - {{ex_name}}  {{intervals}} </p>
+                           <form method="POST" action="/cardioReset?_method=PUT" class="button-size">
+                           <input type="hidden" name= "mb_id" type="text"
+                           value={{id}}>
+                           <button type="submit" class="btn btn-info">NOT COMPLETE!</button>
+                           </form>
                         {{/if}}
                         {{/if_eq}}
                         {{/each}}
@@ -149,6 +159,11 @@
                         {{#if_eq day 3}}
                         {{#if this.completed}}
                            <p> - {{ex_name}}  {{intervals}} </p>
+                           <form method="POST" action="/cardioReset?_method=PUT" class="button-size">
+                           <input type="hidden" name= "mb_id" type="text"
+                           value={{id}}>
+                           <button type="submit" class="btn btn-info">NOT COMPLETE!</button>
+                           </form>
                         {{/if}}
                         {{/if_eq}}
                         {{/each}}
