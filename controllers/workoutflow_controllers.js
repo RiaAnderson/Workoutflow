@@ -70,9 +70,9 @@ router.post("/strength_trainingCreate", function(req, res) {
 
 router.post("/cardioCreate", function(req, res) {
   workouts.cardio.create([
-    "ex_name", "body_part", "intervals", "day"
+    "ex_name", "intervals", "day"
   ], [
-    req.body.ex_name, req.body.body_part, req.body.intervals, req.body.day
+    req.body.ex_name, req.body.intervals, req.body.day
   ], function(result) {
     // Send back the ID of the new quote
     res.redirect("/cardio");
