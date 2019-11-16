@@ -70,6 +70,11 @@
                         {{#if_eq day 1}}
                         {{#if this.completed}}
                           <p> - {{ex_name}}  {{intervals}} </p>
+                          <form method="POST" action="/strength_trainingReset?_method=PUT" class="button-size">
+                          <input type="hidden" name= "mb_id" type="text"
+                          value={{id}}>
+                          <button type="submit" class="btn btn-info">NOT COMPLETE!</button>
+                          </form>
                         {{/if}}
                         {{/if_eq}}
                         {{/each}}
@@ -103,6 +108,11 @@
                         {{#if_eq day 2}}
                         {{#if this.completed}}
                           <p> - {{ex_name}}  {{intervals}} </p>
+                          <form method="POST" action="/strength_trainingReset?_method=PUT" class="button-size">
+                          <input type="hidden" name= "mb_id" type="text"
+                          value={{id}}>
+                          <button type="submit" class="btn btn-info">NOT COMPLETE!</button>
+                          </form>
                         {{/if}}
                         {{/if_eq}}
                         {{/each}}
@@ -113,7 +123,7 @@
         <div class="col-sm-12 center">
             <div class="card bg-light mb-3" style="width:75rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Day 3: Squat Day</h5>
+                    <h5 class="card-title">Day 3</h5>
                     <img src = "https://user-images.githubusercontent.com/52515674/68986284-930f4700-07d2-11ea-8b17-cd4d363f23c7.png" alt="Day3" width="350px" height="300px" style="float: inherit"> 
                     <ul>
                         {{#each str}}
@@ -136,6 +146,11 @@
                         {{#if_eq day 3}}
                         {{#if this.completed}}
                           <p> - {{ex_name}}  {{intervals}} </p>
+                          <form method="POST" action="/strength_trainingReset?_method=PUT" class="button-size">
+                          <input type="hidden" name= "mb_id" type="text"
+                          value={{id}}>
+                          <button type="submit" class="btn btn-info">NOT COMPLETE!</button>
+                          </form>
                         {{/if}}
                         {{/if_eq}}
                         {{/each}}

@@ -17,6 +17,11 @@ var muscle_building = {
       cb(res);
     });
   },
+  reset: function(id, cb) {
+    orm.reset("muscle_building", id, cb, function(res) {
+      cb(res);
+    });
+  },
 };
 
 var cardio = {
@@ -35,6 +40,11 @@ var cardio = {
       cb(res);
     });
   },
+  reset: function(id, cb) {
+    orm.reset("cardio", id, cb, function(res) {
+      cb(res);
+    });
+  },
 } 
 
 var strength_training = {
@@ -50,6 +60,11 @@ var strength_training = {
   },
   update: function(id, cb) {
     orm.update("strength_training", id, cb, function(res) {
+      cb(res);
+    });
+  },
+  reset: function(id, cb) {
+    orm.reset("strength_training", id, cb, function(res) {
       cb(res);
     });
   },
